@@ -8,6 +8,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 
+import { ThemesModule } from '../../themes/themes.module'
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { MatIconModule } from '@angular/material/icon';
   imports: [
     HomeRoutingModule,
     CommonModule,
+    ThemesModule,
     MatSlideToggleModule,
     MatCardModule,
     MatButtonModule,

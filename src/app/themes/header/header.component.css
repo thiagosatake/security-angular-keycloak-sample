@@ -1,0 +1,12 @@
+.mat-toolbar.mat-primary {
+  background: #000000;
+  color: #fff;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.title {
+  margin-left: 10px;
+}

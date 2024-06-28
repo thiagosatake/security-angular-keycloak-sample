@@ -1,0 +1,49 @@
+<mat-toolbar class="mat-primary">
+    <mat-icon>{{ icon }}</mat-icon>            
+    <span class="title">{{ title }}</span>
+    <span class="spacer"></span>
+
+    <ng-template #trueAuthenticatedBlock>
+        <button mat-icon-button [matMenuTriggerFor]="menuPerson">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </ng-template>
+    <ng-template #falseAuthenticatedBlock>
+        <button mat-icon-button>
+            <mat-icon (click)="login()">login</mat-icon>
+        </button>
+    </ng-template>
+
+    <div *ngIf="authenticated; then trueAuthenticatedBlock; else falseAuthenticatedBlock"></div>
+
+    <ng-template #trueAuthenticatedBlock>
+        <button mat-icon-button [matMenuTriggerFor]="menuPerson">
+            <mat-icon>menu</mat-icon>
+        </button>
+    </ng-template>
+    <ng-template #falseAuthenticatedBlock>
+        <button mat-icon-button>
+            <mat-icon (click)="login()">login</mat-icon>
+        </button>
+    </ng-template>
+</mat-toolbar>
+
+<mat-menu #menuPerson="matMenu">
+    <button mat-menu-item (click)="gotToProfile()">
+        <mat-icon>person</mat-icon>
+        <span>{{loggedUserName}}</span>
+    </button>
+    <button mat-menu-item (click)="gotToHome()">
+        <mat-icon>home</mat-icon>
+        <span>Home</span>
+    </button>
+    <button mat-menu-item (click)="gotToPremium()">
+        <mat-icon>grade</mat-icon>
+        <span>Premium</span>
+    </button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item  (click)="logout()" >
+        <mat-icon>logout</mat-icon>
+        <span>Sair</span>
+    </button>
+</mat-menu>

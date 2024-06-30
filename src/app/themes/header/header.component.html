@@ -3,17 +3,6 @@
     <span class="title">{{ title }}</span>
     <span class="spacer"></span>
 
-    <ng-template #trueAuthenticatedBlock>
-        <button mat-icon-button [matMenuTriggerFor]="menuPerson">
-            <mat-icon>menu</mat-icon>
-        </button>
-    </ng-template>
-    <ng-template #falseAuthenticatedBlock>
-        <button mat-icon-button>
-            <mat-icon (click)="login()">login</mat-icon>
-        </button>
-    </ng-template>
-
     <div *ngIf="authenticated; then trueAuthenticatedBlock; else falseAuthenticatedBlock"></div>
 
     <ng-template #trueAuthenticatedBlock>

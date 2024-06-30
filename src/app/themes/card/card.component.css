@@ -1,0 +1,17 @@
+.button-container {    
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+
+.button85 {
+    text-align: center;
+    height: 85px;
+    width: 85px;
+}
+
+.icon85 {
+    font-size: 20px;    
+}
+
+
